@@ -2,16 +2,16 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  let [counter, setCounter] = useState(0);
-  //let counter = 0;
+  // let [counter, setCounter] = useState(0);
+  let counter = 0;
   const increase = () => {
-    //counter = counter + 1;
-    setCounter(counter + 1);
+    counter = counter + 1;
+    // setCounter(counter + 1);
     console.log("button clicked", counter);
   };
   const decrease = () => {
-    //counter = counter - 1;
-    setCounter(counter - 1);
+    counter = counter - 1;
+    // setCounter(counter - 1);
     console.log("button clicked", counter);
   };
   return (
@@ -23,6 +23,6 @@ function App() {
       <button onClick={decrease}>Decrease Value {counter}</button>
     </>
   );
-}
+} 
 
 export default App;
