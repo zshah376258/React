@@ -19,7 +19,7 @@ function Product({name="Nike Shoes",price=499, displayPrice=999, img, discount=3
           alt="product image"
         /> */}
       <div className="absolute inset-0 flex justify-center z-10 mt-28 bord opacity-0 transition-opacity delay-100 duration-1000 hover:opacity-100">
-			  <button className="bg-white bg-opacity-70 border-none font-semibold text-navy-700 px-2 py-2 text-base cursor-pointer transition-all rounded-md">Quick View</button>
+			  <button className="bg-white h-10 mt-14 bg-opacity-70 border-none font-semibold text-blue-900 px-2 text-base cursor-pointer transition-all rounded-xl hover:bg-slate-200 hover:text-black hover:opacity-90">Quick View</button>
 		  </div>
         <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
           {discount}% OFF

@@ -41,6 +41,7 @@ function App() {
             discount={discountedPercent}/>
           )})
         }
+        
       </div>
     </>
   );
