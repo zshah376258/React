@@ -1,22 +1,46 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Product from "./Product";
+import axios from "axios";
 
 function App() {
-  const [count, setCount] = useState(0);
+  
+  const [data, setData] = useState([]);
+  let categoryId = 10006;
+  useEffect(() => {
+    async function getData() {
+      try{
+      const res = await axios.get(`https://26968mukhtar/search/resources/store/10201/productview/byCategory/${categoryId}`);
+      
+      setData(res.data.catalogEntryView);
+
+      }catch(error){
+        console.log("error fetching the data",error);
+      }
+      
+    }
+    getData();
+  },[categoryId])
 
   return (
+    
     <>
       <div className="flex flex-wrap gap-y-0 justify-evenly ali m-0 p-0 ">
-        <Product name="Nike v1 air" price={399} displayPrice={999} discount={30}/>
-        <Product name="Puma z1" price={599} displayPrice={799} discount={40}/>
-        <Product name="Nike air jordan" price={699} displayPrice={999} discount={60}/>
-        <Product name="Nike sports"  displayPrice={599} discount={70}/>
-        <Product name="Gucci sneaker" price={799} discount={20}/>
-        <Product name="Addidas gamma force" price={899} displayPrice={999}/>
-        <Product name="Nike air force"  displayPrice={999} discount={50}/>
-        <Product name="Nike killshot" price={467} discount={20}/>
-        <Product price={644} displayPrice={999}/>
-        <Product price={325} discount={50}/>
+        {
+          data.map((item) => {
+            const imageUrl = `https://26968mukhtar${item.thumbnail}`;
+            const discountedPrice = item.price[0].value - item.price[1].value
+            const discountedPercent=(discountedPrice/item.price[0].value)*100
+            return (
+              
+            <Product  
+            key={item.uniqueID}
+            name={item.name} 
+            price={item.price[1].value} 
+            displayPrice={item.price[0].value} 
+            img={imageUrl}
+            discount={discountedPercent}/>
+          )})
+        }
       </div>
     </>
   );
