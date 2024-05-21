@@ -3,13 +3,13 @@ import React from "react";
 function Product({name="Nike Shoes",price=499, displayPrice=999, img, discount=39}) {
   
   return (
-    <div className="group my-10 flex w-full h-auto max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+    <div className="group my-5 flex w-1/4 max-w-md h-max flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
       <a
         className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
         href="#"
       >
         <img
-          className="peer absolute top-0 right-0 w-full object-cover"
+          className="peer absolute top-0 right-0 w-full object-cover "
           src={img}
           alt="product image"
         />
@@ -28,7 +28,7 @@ function Product({name="Nike Shoes",price=499, displayPrice=999, img, discount=3
       </a>
       <div className="mt-4 px-5 pb-5">
         <a href="#">
-          <h5 className="text-xl tracking-tight text-slate-900 my-3">
+          <h5 className="text-base font-semibold tracking-tight text-slate-900">
             {name}
           </h5>
         </a>
