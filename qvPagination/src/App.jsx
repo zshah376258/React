@@ -10,7 +10,7 @@ function App() {
   const [currPage, setCurrPage] = useState(1);
   const [productsPerPage, setProductsPerPage] = useState(12);
   const [prod, setProd] = useState(0);
-  let categoryId = 10006;
+  let categoryId = 10014;
   
   useEffect(() => {
     async function getData() {

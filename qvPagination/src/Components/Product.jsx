@@ -9,7 +9,7 @@ function Product({name="Nike Shoes",price=499, displayPrice=999, img, discount=3
         href="#"
       >
         <img
-          className="peer absolute top-0 right-0 w-full object-cover "
+          className="peer absolute top-0 left-16 h-full object-cover "
           src={img}
           alt="product image"
         />

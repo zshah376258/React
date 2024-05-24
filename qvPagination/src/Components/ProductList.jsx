@@ -8,7 +8,7 @@ function ProductList({data}) {
           data.map((item) => {
             const imageUrl = `https://26968mukhtar${item.thumbnail}`;
             const discountedPrice = item.price[0].value - item.price[1].value
-            const discountedPercent=(discountedPrice/item.price[0].value)*100
+            const discountedPercent=Math.round((discountedPrice/item.price[0].value)*100)
 
             return (
               
