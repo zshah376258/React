@@ -9,6 +9,7 @@ function ProductList({data}) {
             const imageUrl = `https://26968mukhtar${item.thumbnail}`;
             const discountedPrice = item.price[0].value - item.price[1].value
             const discountedPercent=Math.round((discountedPrice/item.price[0].value)*100)
+            
 
             return (
               
@@ -18,9 +19,9 @@ function ProductList({data}) {
             price={item.price[1].value} 
             displayPrice={item.price[0].value} 
             img={imageUrl}
-            discount={discountedPercent}/>
-
-           
+            discount={discountedPercent}
+            />
+            
           )})
         }
     </div>

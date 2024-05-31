@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function Product({name="Nike Shoes",price=499, displayPrice=999, img, discount=39}) {
   

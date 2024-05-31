@@ -20,7 +20,7 @@ function App() {
       setProd(res.data.recordSetCount);
       setData(res.data.catalogEntryView);
 
-      }catch(error){
+      }catch(error){  
         console.log("error fetching the data",error);
       }
       
