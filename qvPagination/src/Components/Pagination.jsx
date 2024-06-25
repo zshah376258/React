@@ -8,11 +8,19 @@ function Pagination({prod, productsPerPage, setCurrPage, currPage}) {
   }
 
   return (
+    <div className='flex justify-center '>
     <div>
       {
-        pages.map((page, index) => <button key={index} className="hover:bg-gray-200 m-1 p-1 size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"{...page== currPage ? 'active':''} onClick={() => setCurrPage(page)}>{page}</button>)
+        pages.map((page, index) => <button
+        key={index}
+        className={`m-1 p-1 size-8 rounded-md border border-gray-300 bg-cyan-100 text-center font-semibold text-gray-900 ${page === currPage ? 'bg-slate-500 text-white' : ''}`}
+        onClick={() => setCurrPage(page)}
+      >
+        {page}
+      </button>)
       }
 
+    </div>
     </div>
   )
 }

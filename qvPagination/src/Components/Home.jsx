@@ -1,11 +1,11 @@
-/* import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import axios from "axios";
-import ProductList from "./Components/ProductList";
-import Pagination from "./Components/Pagination";
-import Header from "./Components/Header";
+import ProductList from "./ProductList.jsx";
+import Pagination from "./Pagination.jsx";
 
-function App() {
+
+function Home() {
   
   const [data, setData] = useState([]);
   const [currPage, setCurrPage] = useState(1);
@@ -51,5 +51,4 @@ function App() {
   );
 }
 
-export default App;
- */
+export default Home;
